@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <!--方式1-->
+    <android.support.constraint.Guideline
+            android:id="@+id/method1Guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal" />
+
+    <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button2" />
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintLeft_toRightOf="@+id/button1"
+            app:layout_constraintRight_toLeftOf="@+id/button3" />
+
+    <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintLeft_toRightOf="@+id/button2"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    <!--方式1-->
+
+    <!--方式2-->
+    <android.support.constraint.Guideline
+            android:id="@+id/method2Guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="1200dp"
+            app:layout_constraintGuide_percent="0.3" />
+
+    <Button
+            android:id="@+id/method2button1"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@id/method2Guideline"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/method2button2" />
+
+    <Button
+            android:id="@+id/method2button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@id/method2Guideline"
+            app:layout_constraintLeft_toRightOf="@+id/method2button1"
+            app:layout_constraintRight_toLeftOf="@+id/method2button3" />
+
+    <Button
+            android:id="@+id/method2button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@id/method2Guideline"
+            app:layout_constraintLeft_toRightOf="@+id/method2button2"
+            app:layout_constraintRight_toRightOf="parent" />
+    <!--方式2-->
+
+    <!--方式3-->
+    <android.support.constraint.Guideline
+            android:id="@+id/method3Guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="12000dp"
+            app:layout_constraintGuide_percent="0.4" />
+
+    <Button
+            android:id="@+id/method3button1"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/method3Guideline"
+            android:layout_height="wrap_content"
+            android:text="Button1"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+            android:id="@+id/method3button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button2"
+            app:layout_constraintTop_toBottomOf="@id/method3button1" />
+
+    <Button
+            android:id="@+id/method3button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button3"
+            app:layout_constraintTop_toBottomOf="@id/method3button2" />
+
+</android.support.constraint.ConstraintLayout>

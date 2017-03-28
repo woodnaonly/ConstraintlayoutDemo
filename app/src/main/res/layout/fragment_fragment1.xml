@@ -1,0 +1,119 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            <!-- 4:3 ratio -->
+            <ImageView
+                    android:id="@+id/listingImageView_in_rl"
+                    android:layout_width="96dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                    android:id="@+id/titleTextView_in_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/listingImageView_in_rl"
+                    android:lines="1"
+                    android:text="Hey I am title"
+                    android:textSize="20sp"
+
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/descriptionTextView_in_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTextView_in_rl"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/listingImageView_in_rl"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:text="Hey I am description. Yes I am description. Believe on me I am description."
+                    android:textSize="16sp" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/descriptionTextView_in_rl"
+                    android:layout_below="@id/listingImageView_in_rl"
+                    android:text="What! Button, Why " />
+
+
+        </RelativeLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            <ImageView
+                    android:id="@+id/listingImageView"
+                    android:layout_width="96dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.96" />
+
+            <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:lines="1"
+                    android:text="Hey I am title"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/listingImageView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="264dp"
+                    android:layout_height="52dp"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Hey I am description. Yes I am description. Believe on me I am description."
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/listingImageView"
+                    app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+            <!--app:layout_constraintLeft_toRightOf="@id/listingImageView"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/titleTextView"-->
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What! Button, Why "
+                    app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+
+                    app:layout_constraintLeft_toLeftOf="@id/descriptionTextView"
+                    android:id="@+id/button"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="-13dp" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
